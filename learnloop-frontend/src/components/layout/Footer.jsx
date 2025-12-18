@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <img 
-                src="https://res.cloudinary.com/drit9nkha/image/upload/v1766036404/LearnLoopAI_LOGO_crucfj.png" 
+                src="https://res.cloudinary.com/drit9nkha/image/upload/v1766071522/AI_LOGO_v85osw.png" 
                 alt="LearnLoop AI" 
                 className="h-10 w-10"
               />

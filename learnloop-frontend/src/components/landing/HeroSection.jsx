@@ -66,9 +66,9 @@ const HeroSection = () => {
           <div className="relative animate-slideInRight">
             <div className="relative bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
               <img 
-                src="https://res.cloudinary.com/drit9nkha/image/upload/v1766036404/LearnLoopAI_LOGO_crucfj.png" 
+                src="https://res.cloudinary.com/drit9nkha/image/upload/v1766071522/AI_LOGO_v85osw.png" 
                 alt="LearnLoop AI Platform" 
-                className="w-full h-auto"
+                className="w-3/4 h-auto mx-auto"
               />
               <div className="absolute -bottom-6 -right-6 bg-accent-500 text-white px-6 py-3 rounded-xl shadow-lg">
                 <p className="text-sm font-medium">Continuous Learning Loop</p>
