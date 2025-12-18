@@ -276,11 +276,6 @@ vercel
 
 ---
 
-## 📝 License
-MIT License
-
----
-
 ## 👨‍💻 Author
 **Harsha Vardhan Yanakandla**  
 📧 yanakandlaharshavardhan@gmail.com  
