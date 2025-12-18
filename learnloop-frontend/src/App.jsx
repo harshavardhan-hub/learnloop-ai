@@ -26,43 +26,72 @@ function App() {
     <Router>
       <Routes>
         {/* Public Routes */}
-        <Route path="/" element={!user ? <LandingPage /> : <Navigate to="/dashboard" />} />
-        <Route path="/login" element={!user ? <LoginPage /> : <Navigate to="/dashboard" />} />
-        <Route path="/register" element={!user ? <RegisterPage /> : <Navigate to="/dashboard" />} />
-
-        {/* Student Protected Routes */}
         <Route 
-          path="/dashboard" 
-          element={<ProtectedRoute><StudentDashboardPage /></ProtectedRoute>} 
-        />
-        <Route 
-          path="/test/:testId" 
-          element={<ProtectedRoute><TestPage /></ProtectedRoute>} 
-        />
-        <Route 
-          path="/results/:attemptId" 
-          element={<ProtectedRoute><ResultsPage /></ProtectedRoute>} 
+          path="/" 
+          element={
+            user ? (
+              <Navigate to={user.role === 'admin' ? '/admin/dashboard' : '/dashboard'} replace />
+            ) : (
+              <LandingPage />
+            )
+          } 
         />
         
-        {/* ✅ NEW: Learning Loop Practice Route */}
         <Route 
-          path="/learning-loop/:learningLoopId" 
-          element={<ProtectedRoute><ResultsPage isLearningLoop={true} /></ProtectedRoute>} 
+          path="/login" 
+          element={user ? <Navigate to={user.role === 'admin' ? '/admin/dashboard' : '/dashboard'} replace /> : <LoginPage />} 
+        />
+        
+        <Route 
+          path="/register" 
+          element={user ? <Navigate to={user.role === 'admin' ? '/admin/dashboard' : '/dashboard'} replace /> : <RegisterPage />} 
+        />
+
+        {/* Student Protected Routes */}
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute role="student">
+              <StudentDashboardPage />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/test/:testId"
+          element={
+            <ProtectedRoute role="student">
+              <TestPage />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/results/:attemptId"
+          element={
+            <ProtectedRoute role="student">
+              <ResultsPage />
+            </ProtectedRoute>
+          }
         />
 
         {/* Admin Protected Routes */}
-        <Route 
-          path="/admin" 
-          element={<ProtectedRoute adminOnly><AdminDashboardPage /></ProtectedRoute>} 
+        <Route
+          path="/admin/dashboard"
+          element={
+            <ProtectedRoute role="admin">
+              <AdminDashboardPage />
+            </ProtectedRoute>
+          }
         />
 
-        <Route 
-          path="/learning-loop/:learningLoopId/results" 
+        <Route
+          path="/admin/*"
           element={
-            <ProtectedRoute>
-              <ResultsPage isLearningLoop={true} />
+            <ProtectedRoute role="admin">
+              <AdminDashboardPage />
             </ProtectedRoute>
-          } 
+          }
         />
 
         {/* 404 */}
