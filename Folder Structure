@@ -1,0 +1,131 @@
+learnloop-frontend/
+├── public/
+│   └── favicon.ico
+├── src/
+│   ├── assets/
+│   │   └── logo.png
+│   ├── components/
+│   │   ├── common/
+│   │   │   ├── Button.jsx
+│   │   │   ├── Input.jsx
+│   │   │   ├── Card.jsx
+│   │   │   ├── Modal.jsx
+│   │   │   ├── Loader.jsx
+│   │   │   └── ErrorMessage.jsx
+│   │   ├── layout/
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   └── DashboardLayout.jsx
+│   │   ├── landing/
+│   │   │   ├── HeroSection.jsx
+│   │   │   ├── ProblemSection.jsx
+│   │   │   ├── SolutionSection.jsx
+│   │   │   ├── HowItWorksSection.jsx
+│   │   │   └── CTASection.jsx
+│   │   ├── auth/
+│   │   │   ├── LoginForm.jsx
+│   │   │   ├── RegisterForm.jsx
+│   │   │   └── ProtectedRoute.jsx
+│   │   ├── student/
+│   │   │   ├── StudentDashboard.jsx
+│   │   │   ├── TestCard.jsx
+│   │   │   ├── TestInstructions.jsx
+│   │   │   ├── TestInterface.jsx
+│   │   │   ├── ResultsPage.jsx
+│   │   │   ├── MistakeBreakdown.jsx
+│   │   │   ├── AIRetrySection.jsx
+│   │   │   ├── PerformanceGraph.jsx
+│   │   │   └── LearningLoopStatus.jsx
+│   │   └── admin/
+│   │       ├── AdminDashboard.jsx
+│   │       ├── TestUpload.jsx
+│   │       ├── StudentAnalytics.jsx
+│   │       ├── LearningLoopMonitor.jsx
+│   │       └── AIUsageStats.jsx
+│   ├── pages/
+│   │   ├── LandingPage.jsx
+│   │   ├── LoginPage.jsx
+│   │   ├── RegisterPage.jsx
+│   │   ├── StudentDashboardPage.jsx
+│   │   ├── TestPage.jsx
+│   │   ├── ResultsPage.jsx
+│   │   ├── AdminDashboardPage.jsx
+│   │   └── NotFoundPage.jsx
+│   ├── services/
+│   │   ├── api.js
+│   │   ├── authService.js
+│   │   ├── testService.js
+│   │   ├── adminService.js
+│   │   └── aiService.js
+│   ├── context/
+│   │   ├── AuthContext.jsx
+│   │   └── TestContext.jsx
+│   ├── utils/
+│   │   ├── constants.js
+│   │   ├── validators.js
+│   │   └── helpers.js
+│   ├── hooks/
+│   │   ├── useAuth.js
+│   │   ├── useTest.js
+│   │   └── useTimer.js
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── .env
+├── .env.example
+├── .gitignore
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── postcss.config.js
+├── vite.config.js
+└── README.md
+
+
+learnloop-backend/
+├── src/
+│   ├── config/
+│   │   ├── database.js
+│   │   ├── jwt.js
+│   │   └── openrouter.js
+│   ├── models/
+│   │   ├── User.js
+│   │   ├── Test.js
+│   │   ├── Question.js
+│   │   ├── Attempt.js
+│   │   ├── Result.js
+│   │   ├── AIQuestion.js
+│   │   └── LearningLoop.js
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   ├── studentController.js
+│   │   ├── testController.js
+│   │   ├── adminController.js
+│   │   └── aiController.js
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   ├── studentRoutes.js
+│   │   ├── testRoutes.js
+│   │   ├── adminRoutes.js
+│   │   └── aiRoutes.js
+│   ├── middleware/
+│   │   ├── authMiddleware.js
+│   │   ├── adminMiddleware.js
+│   │   ├── errorHandler.js
+│   │   ├── rateLimiter.js
+│   │   └── validateRequest.js
+│   ├── services/
+│   │   ├── aiService.js
+│   │   ├── testService.js
+│   │   ├── analyticsService.js
+│   │   └── cacheService.js
+│   ├── utils/
+│   │   ├── validators.js
+│   │   ├── helpers.js
+│   │   └── constants.js
+│   └── server.js
+├── .env
+├── .env.example
+├── .gitignore
+├── package.json
+└── README.md
